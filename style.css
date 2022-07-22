@@ -65,6 +65,10 @@ button {
   outline: none;
 }
 
+button:hover {
+  filter: brightness(110%);
+}
+
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 1000px) {
   .quote-container {
