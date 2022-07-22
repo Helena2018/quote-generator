@@ -13,6 +13,12 @@ function loading() {
   quoteContainer.hidden = true
 }
 
+// Hide Loading
+function complete() {
+  quoteContainer.hidden = false
+  loader.hidden = true
+}
+
 // New Quote
 function newQuote(){
   // Pick a random quote from apiQuotes array
@@ -55,4 +61,5 @@ newQuoteBtn.addEventListener('click',newQuote)
 twitterBtn.addEventListener('click', tweetQuote)
 
 // on Load
-getQuotes()
+// getQuotes()
+loading()
