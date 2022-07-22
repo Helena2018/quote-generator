@@ -7,14 +7,21 @@ const newQuoteBtn = document.getElementById('new-button')
 let apiQuotes = []
 
 // Click Funciont to Get a New Quote
-newQuoteBtn.addEventListener('click',newQuote)
+// newQuoteBtn.addEventListener('click',newQuote)
 
 // New Quote
 function newQuote(){
   // Pick a random quote from apiQuotes array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)]
+  // Check if author field is blank and replace it with 'Unknow"
+  if(!quote.author) {
+    authorText.textContent = 'Unknow'
+  } else {
+    authorText.textContent = quote.author
+  }
+
   quoteText.textContent = quote.text
-  authorText.textContent = quote.author
+
   console.log(quote.text)
 }
 
