@@ -6,9 +6,6 @@ const newQuoteBtn = document.getElementById('new-button')
 
 let apiQuotes = []
 
-// Click Funciont to Get a New Quote
-newQuoteBtn.addEventListener('click',newQuote)
-
 // New Quote
 function newQuote(){
   // Pick a random quote from apiQuotes array
@@ -26,8 +23,6 @@ function newQuote(){
     quoteText.classList.remove('long-quote')
   }
   quoteText.textContent = quote.text
-
-  console.log(quote.text)
 }
 
 // Get Quotes From API
@@ -48,6 +43,9 @@ function tweetQuote() {
   window.open(twitterUrl, '_blank')
 }
 
-tweetQuote()
+// Event Listeners
+newQuoteBtn.addEventListener('click',newQuote)
+twitterBtn.addEventListener('click', tweetQuote)
+
 // on Load
 getQuotes()
