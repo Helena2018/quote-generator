@@ -7,7 +7,7 @@ const newQuoteBtn = document.getElementById('new-button')
 let apiQuotes = []
 
 // Click Funciont to Get a New Quote
-// newQuoteBtn.addEventListener('click',newQuote)
+newQuoteBtn.addEventListener('click',newQuote)
 
 // New Quote
 function newQuote(){
@@ -42,4 +42,12 @@ async function getQuotes() {
   } 
 }
 
+// Tweet Quote
+function tweetQuote() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`
+  window.open(twitterUrl, '_blank')
+}
+
+tweetQuote()
+// on Load
 getQuotes()
