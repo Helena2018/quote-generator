@@ -3,8 +3,15 @@ const quoteText = document.getElementById('quote')
 const authorText = document.getElementById('author')
 const twitterBtn = document.getElementById('twitter')
 const newQuoteBtn = document.getElementById('new-button')
+const loader = document.getElementById('loader')
 
 let apiQuotes = []
+
+// Show Loading
+function loading() {
+  loader.hidden = false
+  quoteContainer.hidden = true
+}
 
 // New Quote
 function newQuote(){
