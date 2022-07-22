@@ -6,6 +6,9 @@ const newQuoteBtn = document.getElementById('new-button')
 
 let apiQuotes = []
 
+// Click Funciont to Get a New Quote
+newQuoteBtn.addEventListener('click',newQuote)
+
 // New Quote
 function newQuote(){
   // Pick a random quote from apiQuotes array
